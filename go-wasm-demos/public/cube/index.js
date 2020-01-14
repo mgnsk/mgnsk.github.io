@@ -574,7 +574,7 @@ PCMPlayer.prototype.playNext = function (samplesLeft, samplesRight) {
     }
     const go = new Go();
     let mod, inst;
-    WebAssembly.instantiateStreaming(fetch("http://localhost:8080/cube/cube.wasm"), go.importObject).then((result) => {
+    WebAssembly.instantiateStreaming(fetch("https://mgnsk.github.io/go-wasm-demos/public/cube/cube.wasm"), go.importObject).then((result) => {
         mod = result.module;
         inst = result.instance;
         run().then((result) => {
